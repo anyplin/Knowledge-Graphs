@@ -101,7 +101,7 @@ ex:location ex:Gent .
 
 ex:HydrosyncAi a ex:StartUpCompany ;
 rdfs:label "Hydrosync.ai"@en ;
-rdfs:comment "A specific instance of a the start-up company representing the organization hydrosync.ai, who is focusing on accelerating the decarbonization of buildings by utilizing IoT sensor networks and AI-driven insights to optimize indoor climate comfort and reduce energy waste."@en ;
+rdfs:comment "A specific instance of the start-up company representing the organization hydrosync.ai, who is focusing on accelerating the decarbonization of buildings by utilizing IoT sensor networks and AI-driven insights to optimize indoor climate comfort and reduce energy waste."@en ;
 ex:basedAt ex:WinterCircus .
 
 ex:Anna a ex:Person ;
