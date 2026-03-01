@@ -2,11 +2,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
-<#Person>  a rdfs:Class;
+<#Person> a rdfs:Class;
 rdfs:label "person"@en;
 rdfs:comment "A person is a human being who is regarded as an individual."@en.
 
-<#Country>  a rdfs:Class;
+<#Country> a rdfs:Class;
 rdfs:label "country"@en;
 rdfs:comment "State or a nation."@en.
 
