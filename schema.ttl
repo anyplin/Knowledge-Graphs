@@ -2,13 +2,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
-<#Person> rdfs:label "person"@en;
+<#Person>  a rdfs:Class;
+rdfs:label "person"@en;
 rdfs:comment "A person is a human being who is regarded as an individual."@en.
 
-<#Country> rdfs:label "country"@en;
+<#Country>  a rdfs:Class;
+rdfs:label "country"@en;
 rdfs:comment "State or a nation."@en.
 
-<#CourseOfStudy> rdfs:label "course of study"@en;
+<#CourseOfStudy> a rdfs:Class;
+rdfs:label "course of study"@en;
 rdfs:comment "A set of classes or a plan of study on a particular subject, usually leading to an exam or qualification."@en.
 
 <#Company> a rdfs:Class;
