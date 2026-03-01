@@ -1,7 +1,10 @@
 @prefix ex: <https://anyplin.github.io/Knowledge-Graphs/#> .
+@prefix jelle: <> .
+@prefix kelly: <> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+# Classes
 ex:Person a rdfs:Class ;
 rdfs:label "person"@en ;
 rdfs:comment "A person is a human being who is regarded as an individual."@en .
@@ -36,6 +39,7 @@ ex:City a rdfs:Class ;
 rdfs:label "city"@en ;
 rdfs:comment "An urban settlement that serves as a primary geographic container for buildings, organizations, and residents."@en .
 
+# Properties
 ex:origin a rdf:Property ;
 rdfs:label "origin"@en ;
 rdfs:comment "Where a person was born."@en ;
@@ -78,6 +82,13 @@ rdfs:comment "Work place where a company is based at."@en ;
 rdfs:domain ex:Company ;
 rdfs:range ex:WorkPlace .
 
+ex:knows a rdf:Property ;
+rdfs:label "knows"@en ;
+rdfs:comment "Relates a person to another person they are acquainted with. This defines a social relationship between two individuals."@en ;
+rdfs:domain ex:Person ;
+rdfs:range ex:Person .
+
+# Instances
 ex:Germany a ex:Country ;
 rdfs:label "Germany"@en ;
 rdfs:comment "Country in central Europe."@en .
@@ -111,4 +122,6 @@ ex:origin ex:Germany ;
 ex:familyOrigin ex:Taiwan ;
 ex:graduated ex:MasterOfComputerScience ;
 ex:worksFor ex:HydrosyncAi ;
-ex:workLocation ex:WinterCircus .
+ex:workLocation ex:WinterCircus ;
+ex:knows jelle:Jelle ;
+ex:knows kelly:Kelly .
