@@ -46,11 +46,11 @@ rdfs:comment "Where a person was born."@en ;
 rdfs:domain <#Person> ;
 rdfs:range <#Country> .
 
-<#familyOrigin a rdf:Property ;
+<#familyOrigin> a rdf:Property ;
 rdfs:label "family origin"@en ;
 rdfs:comment "Where a family originates from."@en ;
-rdfs:domain <#Person ;
-rdfs:range <#Country .
+rdfs:domain <#Person> ;
+rdfs:range <#Country> .
 
 <#graduated> a rdf:Property ;
 rdfs:label "graduated"@en ;
