@@ -1,8 +1,9 @@
 @base <https://anyplin.github.io/Knowledge-Graphs/data.ttl#> .
 @prefix jn: <https://jellenelis.github.io/knowledge-graphs/data.ttl#> .
-@prefix km: <> .
+@prefix km: <https://kellymarino.github.io/knowledge-graphs-2026/data.ttl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Classes
 <#Person> a rdfs:Class ;
@@ -40,6 +41,12 @@ rdfs:label "city"@en ;
 rdfs:comment "An urban settlement that serves as a primary geographic container for buildings, organizations, and residents."@en .
 
 # Properties
+<#name> a rdf:Property ;
+rdfs:label "name"@en ;
+rdfs:comment "Name associated to a person"@en ;
+rdfs:domain <#Person> ;
+rdfs:range xsd:string .
+
 <#origin> a rdf:Property ;
 rdfs:label "origin"@en ;
 rdfs:comment "Where a person was born."@en ;
@@ -118,10 +125,10 @@ rdfs:comment "A specific instance of the start-up company representing the organ
 <#Anna> a <#Person> ;
 rdfs:label "Anna"@en ;
 rdfs:comment "An individual record representing the personal, educational, and cultural background of Anna."@en ;
+<#name> "Anna Lin" ;
 <#origin> <#Germany> ;
 <#familyOrigin> <#Taiwan> ;
 <#graduated> <#MasterOfComputerScience> ;
 <#worksFor> <#HydrosyncAi> ;
 <#workLocation> <#WinterCircus> ;
-<#knows> jn:Jelle ;
-<#knows> km:Kelly .
+<#knows> jn:JelleNelis, km:MyName ;
