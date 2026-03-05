@@ -131,4 +131,4 @@ rdfs:comment "An individual record representing the personal, educational, and c
 <#graduated> <#MasterOfComputerScience> ;
 <#worksFor> <#HydrosyncAi> ;
 <#workLocation> <#WinterCircus> ;
-<#knows> jn:JelleNelis, km:MyName ;
+<#knows> jn:JelleNelis, km:MyName .
