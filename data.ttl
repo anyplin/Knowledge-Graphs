@@ -101,9 +101,9 @@ rdfs:subPropertyOf foaf:knows ;
 rdfs:domain <#Person> ;
 rdfs:range <#Person> .
 
-<#enrolledIn> a rdf:Property ;
-rdfs:label "enrolled in"@en ;
-rdfs:comment "The fact that a person is enrolled in a certain course" ;
+<#courseParticipant> a rdf:Property ;
+rdfs:label "course participant"@en ;
+rdfs:comment "The fact that a person is participating in a certain course" ;
 rdfs:domain <#Person> ;
 rdfs:range <#Course> .
 
@@ -147,5 +147,5 @@ rdfs:comment "An individual record representing the personal, educational, and c
 <#graduated> <#MasterOfComputerScience> ;
 <#worksFor> <#HydrosyncAi> ;
 <#workLocation> <#WinterCircus> ;
-<#enrolledIn> <#KnowledgeGraphs> ;
+<#courseParticipant> <#KnowledgeGraphs> ;
 <#knows> jn:JelleNelis, km:MyName .
