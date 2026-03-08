@@ -147,5 +147,5 @@ rdfs:comment "An individual record representing the personal, educational, and c
 <#graduated> <#MasterOfComputerScience> ;
 <#worksFor> <#HydrosyncAi> ;
 <#workLocation> <#WinterCircus> ;
-<#enrolledIn> <#KnowledeGraphs> ;
+<#enrolledIn> <#KnowledgeGraphs> ;
 <#knows> jn:JelleNelis, km:MyName .
