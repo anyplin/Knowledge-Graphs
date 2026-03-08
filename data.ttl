@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 # Classes
 <#Person> a rdfs:Class ;
@@ -17,6 +18,10 @@ rdfs:comment "State or a nation."@en .
 <#CourseOfStudy> a rdfs:Class ;
 rdfs:label "course of study"@en ;
 rdfs:comment "A set of classes or a plan of study on a particular subject, usually leading to an exam or qualification."@en .
+
+<#Course> a rdfs:Class ;
+rdfs:label "Course within a course of study"@en ;
+rdfs:comment "A required course that contributes toward completing a specific course of study"@en .
 
 <#Company> a rdfs:Class ;
 rdfs:label "company"@en ;
@@ -92,8 +97,15 @@ rdfs:range <#WorkPlace> .
 <#knows> a rdf:Property ;
 rdfs:label "knows"@en ;
 rdfs:comment "Relates a person to another person they are acquainted with. This defines a social relationship between two individuals."@en ;
+rdfs:subPropertyOf foaf:knows ;
 rdfs:domain <#Person> ;
 rdfs:range <#Person> .
+
+<#enrolledIn> a rdf:Property ;
+rdfs:label "enrolled in"@en ;
+rdfs:comment "The fact that a person is enrolled in a certain course" ;
+rdfs:domain <#Person> ;
+rdfs:range <#Course> .
 
 # Instances
 <#Germany> a <#Country> ;
@@ -122,6 +134,10 @@ rdfs:label "Hydrosync.ai"@en ;
 rdfs:comment "A specific instance of the start-up company representing the organization hydrosync.ai, who is focusing on accelerating the decarbonization of buildings by utilizing IoT sensor networks and AI-driven insights to optimize indoor climate comfort and reduce energy waste."@en ;
 <#basedAt> <#WinterCircus> .
 
+<#KnowledgeGraphs> a <#Course> ;
+rdfs:label "Knowledge Graph"@en ;
+rdfs:comment "The course Knowledge graph which is offered by the University of Gent in Belgium."@en .
+
 <#Anna> a <#Person> ;
 rdfs:label "Anna"@en ;
 rdfs:comment "An individual record representing the personal, educational, and cultural background of Anna."@en ;
@@ -131,4 +147,5 @@ rdfs:comment "An individual record representing the personal, educational, and c
 <#graduated> <#MasterOfComputerScience> ;
 <#worksFor> <#HydrosyncAi> ;
 <#workLocation> <#WinterCircus> ;
+<#enrolledIn> <#KnowledeGraphs> ;
 <#knows> jn:JelleNelis, km:MyName .
