@@ -6,44 +6,44 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 # Instances
-vocab:Germany a vocab:Country ;
+<#Germany> a vocab:Country ;
 rdfs:label "Germany"@en ;
 rdfs:comment "Country in central Europe."@en .
 
-vocab:Taiwan a vocab:Country ;
+<#Taiwan> a vocab:Country ;
 rdfs:label "Taiwan"@en ;
 rdfs:comment "Country in East Asia."@en .
 
-vocab:Gent a vocab:City ;
+<#Gent> a vocab:City ;
 rdfs:label "Gent"@en ;
 rdfs:comment "A specific instance of a city or administrative area representing Gent, Belgium."@en .
 
-vocab:MasterOfComputerScience a vocab:CourseOfStudy ;
+<#MasterOfComputerScience> a vocab:CourseOfStudy ;
 rdfs:label "Master of Computer Science"@en ;
 rdfs:comment "A university degree focused on advanced computing theory, software development, and information systems."@en .
 
-vocab:WinterCircus a vocab:StartUpHub ;
+<#WinterCircus> a vocab:StartUpHub ;
 rdfs:label "Wintercircus"@en ;
 rdfs:comment "A specific instance of a technology hub representing the Wintercircus in Ghent, which provides a collaborative ecosystem for entrepreneurs and high-tech organizations."@en ;
 vocab:location vocab:Gent .
 
-vocab:HydrosyncAi a vocab:StartUpCompany ;
+<#HydrosyncAi> a vocab:StartUpCompany ;
 rdfs:label "Hydrosync.ai"@en ;
 rdfs:comment "A specific instance of the start-up company representing the organization hydrosync.ai, who is focusing on accelerating the decarbonization of buildings by utilizing IoT sensor networks and AI-driven insights to optimize indoor climate comfort and reduce energy waste."@en ;
 vocab:basedAt vocab:WinterCircus .
 
-vocab:KnowledgeGraphs a vocab:Course ;
+<#KnowledgeGraphs> a vocab:Course ;
 rdfs:label "Knowledge Graph"@en ;
 rdfs:comment "The course Knowledge graph which is offered by the University of Gent in Belgium."@en .
 
-vocab:Anna a vocab:Person ;
+<#Anna> a vocab:Person ;
 rdfs:label "Anna"@en ;
 rdfs:comment "An individual record representing the personal, educational, and cultural background of Anna."@en ;
 vocab:name "Anna Lin" ;
-vocab:origin vocab:Germany ;
-vocab:familyOrigin vocab:Taiwan ;
-vocab:graduated vocab:MasterOfComputerScience ;
-vocab:worksFor vocab:HydrosyncAi ;
-vocab:workLocation vocab:WinterCircus ;
-vocab:courseParticipant vocab:KnowledgeGraphs ;
+vocab:origin <#Germany> ;
+vocab:familyOrigin <#Taiwan> ;
+vocab:graduated <#MasterOfComputerScience> ;
+vocab:worksFor <#HydrosyncAi> ;
+vocab:workLocation <#WinterCircus> ;
+vocab:courseParticipant <#KnowledgeGraphs> ;
 vocab:knows jn:JelleNelis, km:MyName .
