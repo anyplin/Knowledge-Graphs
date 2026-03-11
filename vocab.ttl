@@ -1,0 +1,107 @@
+@base <https://anyplin.github.io/Knowledge-Graphs/data.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Classes
+<#Person> a rdfs:Class ;
+rdfs:label "person"@en ;
+rdfs:comment "A person is a human being who is regarded as an individual."@en .
+
+<#Country> a rdfs:Class ;
+rdfs:label "country"@en ;
+rdfs:comment "State or a nation."@en .
+
+<#CourseOfStudy> a rdfs:Class ;
+rdfs:label "course of study"@en ;
+rdfs:comment "A set of classes or a plan of study on a particular subject, usually leading to an exam or qualification."@en .
+
+<#Course> a rdfs:Class ;
+rdfs:label "Course within a course of study"@en ;
+rdfs:comment "A required course that contributes toward completing a specific course of study"@en .
+
+<#Company> a rdfs:Class ;
+rdfs:label "company"@en ;
+rdfs:comment "A professional organization that acts as an employer and a structured entity for collective work and commercial goals."@en .
+
+<#StartUpCompany> a rdfs:Class ;
+rdfs:subClassOf <#Company> ;
+rdfs:label "start-up company"@en ;
+rdfs:comment "A young company founded by one or more entrepreneurs to develop a unique product or service and bring it to market, typically characterized by high innovation and rapid scalability."@en .
+
+<#WorkPlace> a rdfs:Class ;
+rdfs:label "work place"@en ;
+rdfs:comment "Place where a company is located in."@en .
+
+<#StartUpHub> a rdfs:Class ;
+rdfs:subClassOf <#WorkPlace> ;
+rdfs:label "start-up hub"@en ;
+rdfs:comment "Special type of work place where start-up companies are gathered."@en .
+
+<#City> a rdfs:Class ;
+rdfs:label "city"@en ;
+rdfs:comment "An urban settlement that serves as a primary geographic container for buildings, organizations, and residents."@en .
+
+# Properties
+<#name> a rdf:Property ;
+rdfs:label "name"@en ;
+rdfs:comment "Name associated to a person"@en ;
+rdfs:domain <#Person> ;
+rdfs:range xsd:string .
+
+<#origin> a rdf:Property ;
+rdfs:label "origin"@en ;
+rdfs:comment "Where a person was born."@en ;
+rdfs:domain <#Person> ;
+rdfs:range <#Country> .
+
+<#familyOrigin> a rdf:Property ;
+rdfs:label "family origin"@en ;
+rdfs:comment "Where a family originates from."@en ;
+rdfs:domain <#Person> ;
+rdfs:range <#Country> .
+
+<#graduated> a rdf:Property ;
+rdfs:label "graduated"@en ;
+rdfs:comment "The fact of finishing a degree or other course of study at a university or school."@en ;
+rdfs:domain <#Person> ;
+rdfs:range <#CourseOfStudy> .
+
+<#worksFor> a rdf:Property ;
+rdfs:label "works for"@en ;
+rdfs:comment "Relates a person to an organization, company, or institution where they are currently employed."@en ;
+rdfs:domain <#Person> ;
+rdfs:range <#Company> .
+
+<#workLocation> a rdf:Property ;
+rdfs:label "work location"@en ;
+rdfs:comment "Location where a person is working."@en ;
+rdfs:domain <#Person> ;
+rdfs:range <#WorkPlace> .
+
+<#location> a rdf:Property ;
+rdfs:label "location"@en ;
+rdfs:comment "City where a work place is based at."@en ;
+rdfs:domain <#WorkPlace> ;
+rdfs:range <#City> .
+
+<#basedAt> a rdf:Property ;
+rdfs:label "based at"@en ;
+rdfs:comment "Work place where a company is based at."@en ;
+rdfs:domain <#Company> ;
+rdfs:range <#WorkPlace> .
+
+<#knows> a rdf:Property ;
+rdfs:label "knows"@en ;
+rdfs:comment "Relates a person to another person they are acquainted with. This defines a social relationship between two individuals."@en ;
+owl:equivalentProperty foaf:knows ;
+rdfs:domain <#Person> ;
+rdfs:range <#Person> .
+
+<#courseParticipant> a rdf:Property ;
+rdfs:label "course participant"@en ;
+rdfs:comment "The fact that a person is participating in a certain course" ;
+rdfs:domain <#Person> ;
+rdfs:range <#Course> .
