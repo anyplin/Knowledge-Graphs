@@ -1,151 +1,49 @@
-@base <https://anyplin.github.io/Knowledge-Graphs/data.ttl#> .
-@prefix jn: <https://jellenelis.github.io/knowledge-graphs/data.ttl#> .
-@prefix km: <https://kellymarino.github.io/knowledge-graphs-2026/data.ttl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-# Classes
-<#Person> a rdfs:Class ;
-rdfs:label "person"@en ;
-rdfs:comment "A person is a human being who is regarded as an individual."@en .
-
-<#Country> a rdfs:Class ;
-rdfs:label "country"@en ;
-rdfs:comment "State or a nation."@en .
-
-<#CourseOfStudy> a rdfs:Class ;
-rdfs:label "course of study"@en ;
-rdfs:comment "A set of classes or a plan of study on a particular subject, usually leading to an exam or qualification."@en .
-
-<#Course> a rdfs:Class ;
-rdfs:label "Course within a course of study"@en ;
-rdfs:comment "A required course that contributes toward completing a specific course of study"@en .
-
-<#Company> a rdfs:Class ;
-rdfs:label "company"@en ;
-rdfs:comment "A professional organization that acts as an employer and a structured entity for collective work and commercial goals."@en .
-
-<#StartUpCompany> a rdfs:Class ;
-rdfs:subClassOf <#Company> ;
-rdfs:label "start-up company"@en ;
-rdfs:comment "A young company founded by one or more entrepreneurs to develop a unique product or service and bring it to market, typically characterized by high innovation and rapid scalability."@en .
-
-<#WorkPlace> a rdfs:Class ;
-rdfs:label "work place"@en ;
-rdfs:comment "Place where a company is located in."@en .
-
-<#StartUpHub> a rdfs:Class ;
-rdfs:subClassOf <#WorkPlace> ;
-rdfs:label "start-up hub"@en ;
-rdfs:comment "Special type of work place where start-up companies are gathered."@en .
-
-<#City> a rdfs:Class ;
-rdfs:label "city"@en ;
-rdfs:comment "An urban settlement that serves as a primary geographic container for buildings, organizations, and residents."@en .
-
-# Properties
-<#name> a rdf:Property ;
-rdfs:label "name"@en ;
-rdfs:comment "Name associated to a person"@en ;
-rdfs:domain <#Person> ;
-rdfs:range xsd:string .
-
-<#origin> a rdf:Property ;
-rdfs:label "origin"@en ;
-rdfs:comment "Where a person was born."@en ;
-rdfs:domain <#Person> ;
-rdfs:range <#Country> .
-
-<#familyOrigin> a rdf:Property ;
-rdfs:label "family origin"@en ;
-rdfs:comment "Where a family originates from."@en ;
-rdfs:domain <#Person> ;
-rdfs:range <#Country> .
-
-<#graduated> a rdf:Property ;
-rdfs:label "graduated"@en ;
-rdfs:comment "The fact of finishing a degree or other course of study at a university or school."@en ;
-rdfs:domain <#Person> ;
-rdfs:range <#CourseOfStudy> .
-
-<#worksFor> a rdf:Property ;
-rdfs:label "works for"@en ;
-rdfs:comment "Relates a person to an organization, company, or institution where they are currently employed."@en ;
-rdfs:domain <#Person> ;
-rdfs:range <#Company> .
-
-<#workLocation> a rdf:Property ;
-rdfs:label "work location"@en ;
-rdfs:comment "Location where a person is working."@en ;
-rdfs:domain <#Person> ;
-rdfs:range <#WorkPlace> .
-
-<#location> a rdf:Property ;
-rdfs:label "location"@en ;
-rdfs:comment "City where a work place is based at."@en ;
-rdfs:domain <#WorkPlace> ;
-rdfs:range <#City> .
-
-<#basedAt> a rdf:Property ;
-rdfs:label "based at"@en ;
-rdfs:comment "Work place where a company is based at."@en ;
-rdfs:domain <#Company> ;
-rdfs:range <#WorkPlace> .
-
-<#knows> a rdf:Property ;
-rdfs:label "knows"@en ;
-rdfs:comment "Relates a person to another person they are acquainted with. This defines a social relationship between two individuals."@en ;
-rdfs:subPropertyOf foaf:knows ;
-rdfs:domain <#Person> ;
-rdfs:range <#Person> .
-
-<#courseParticipant> a rdf:Property ;
-rdfs:label "course participant"@en ;
-rdfs:comment "The fact that a person is participating in a certain course" ;
-rdfs:domain <#Person> ;
-rdfs:range <#Course> .
+@base <https://anyplin.github.io/Knowledge-Graphs/data.ttl# .
+@prefix vocab: <https://anyplin.github.io/Knowledge-Graphs/vocab.ttl# .
+@prefix jn: <https://jellenelis.github.io/knowledge-graphs/data.ttl# .
+@prefix km: <https://kellymarino.github.io/knowledge-graphs-2026/data.ttl# .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns# .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema# .
 
 # Instances
-<#Germany> a <#Country> ;
+vocab:Germany a vocab:Country ;
 rdfs:label "Germany"@en ;
 rdfs:comment "Country in central Europe."@en .
 
-<#Taiwan> a <#Country> ;
+vocab:Taiwan a vocab:Country ;
 rdfs:label "Taiwan"@en ;
 rdfs:comment "Country in East Asia."@en .
 
-<#Gent> a <#City> ;
+vocab:Gent a vocab:City ;
 rdfs:label "Gent"@en ;
 rdfs:comment "A specific instance of a city or administrative area representing Gent, Belgium."@en .
 
-<#MasterOfComputerScience> a <#CourseOfStudy> ;
+vocab:MasterOfComputerScience a vocab:CourseOfStudy ;
 rdfs:label "Master of Computer Science"@en ;
 rdfs:comment "A university degree focused on advanced computing theory, software development, and information systems."@en .
 
-<#WinterCircus> a <#StartUpHub> ;
+vocab:WinterCircus a vocab:StartUpHub ;
 rdfs:label "Wintercircus"@en ;
 rdfs:comment "A specific instance of a technology hub representing the Wintercircus in Ghent, which provides a collaborative ecosystem for entrepreneurs and high-tech organizations."@en ;
-<#location> <#Gent> .
+vocab:location vocab:Gent .
 
-<#HydrosyncAi> a <#StartUpCompany> ;
+vocab:HydrosyncAi a vocab:StartUpCompany ;
 rdfs:label "Hydrosync.ai"@en ;
 rdfs:comment "A specific instance of the start-up company representing the organization hydrosync.ai, who is focusing on accelerating the decarbonization of buildings by utilizing IoT sensor networks and AI-driven insights to optimize indoor climate comfort and reduce energy waste."@en ;
-<#basedAt> <#WinterCircus> .
+vocab:basedAt vocab:WinterCircus .
 
-<#KnowledgeGraphs> a <#Course> ;
+vocab:KnowledgeGraphs a vocab:Course ;
 rdfs:label "Knowledge Graph"@en ;
 rdfs:comment "The course Knowledge graph which is offered by the University of Gent in Belgium."@en .
 
-<#Anna> a <#Person> ;
+vocab:Anna a vocab:Person ;
 rdfs:label "Anna"@en ;
 rdfs:comment "An individual record representing the personal, educational, and cultural background of Anna."@en ;
-<#name> "Anna Lin" ;
-<#origin> <#Germany> ;
-<#familyOrigin> <#Taiwan> ;
-<#graduated> <#MasterOfComputerScience> ;
-<#worksFor> <#HydrosyncAi> ;
-<#workLocation> <#WinterCircus> ;
-<#courseParticipant> <#KnowledgeGraphs> ;
-<#knows> jn:JelleNelis, km:MyName .
+vocab:name "Anna Lin" ;
+vocab:origin vocab:Germany ;
+vocab:familyOrigin vocab:Taiwan ;
+vocab:graduated vocab:MasterOfComputerScience ;
+vocab:worksFor vocab:HydrosyncAi ;
+vocab:workLocation vocab:WinterCircus ;
+vocab:courseParticipant vocab:KnowledgeGraphs ;
+vocab:knows jn:JelleNelis, km:MyName .
