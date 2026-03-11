@@ -25,12 +25,12 @@ rdfs:comment "A university degree focused on advanced computing theory, software
 <#WinterCircus> a vocab:StartUpHub ;
 rdfs:label "Wintercircus"@en ;
 rdfs:comment "A specific instance of a technology hub representing the Wintercircus in Ghent, which provides a collaborative ecosystem for entrepreneurs and high-tech organizations."@en ;
-vocab:location vocab:Gent .
+vocab:location <#Gent> .
 
 <#HydrosyncAi> a vocab:StartUpCompany ;
 rdfs:label "Hydrosync.ai"@en ;
 rdfs:comment "A specific instance of the start-up company representing the organization hydrosync.ai, who is focusing on accelerating the decarbonization of buildings by utilizing IoT sensor networks and AI-driven insights to optimize indoor climate comfort and reduce energy waste."@en ;
-vocab:basedAt vocab:WinterCircus .
+vocab:basedAt <#WinterCircus> .
 
 <#KnowledgeGraphs> a vocab:Course ;
 rdfs:label "Knowledge Graph"@en ;
