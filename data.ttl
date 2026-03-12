@@ -48,6 +48,4 @@ vocab:workLocation <#WinterCircus> ;
 vocab:courseParticipant <#KnowledgeGraphs> ;
 vocab:knows jn:JelleNelis, km:MyName .
 
-jn:JelleNelis vocab:courseParticipant <#KnowledgeGraphs> .
-
 km:MyName vocab:courseParticipant <#KnowledgeGraphs> .
