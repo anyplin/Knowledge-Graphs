@@ -2,6 +2,7 @@
 @prefix vocab: <https://anyplin.github.io/Knowledge-Graphs/vocab.ttl#> .
 @prefix jn: <https://jellenelis.github.io/knowledge-graphs/data.ttl#> .
 @prefix km: <https://kellymarino.github.io/knowledge-graphs-2026/data.ttl#> .
+@prefix seppe: <https://seppesantens.github.io/rdf-lab2/data.ttl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -46,6 +47,6 @@ vocab:graduated <#MasterOfComputerScience> ;
 vocab:worksFor <#HydrosyncAi> ;
 vocab:workLocation <#WinterCircus> ;
 vocab:courseParticipant <#KnowledgeGraphs> ;
-vocab:knows jn:JelleNelis, km:MyName .
+vocab:knows jn:JelleNelis, km:MyName, seppe:me .
 
 km:MyName vocab:courseParticipant <#KnowledgeGraphs> .
