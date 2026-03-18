@@ -133,7 +133,7 @@ rdfs:domain <#Photograph> ;
 rdfs:range <#Person> .
 
 <#depicts> a rdf:Property ;
-rdfs:subPropertyOf foaf:depicts ;
+owl:equivalentProperty foaf:depicts ;
 rdfs:label "depicts"@en ;
 rdfs:comment "To represent or show something in a picture or story" ;
 rdfs:domain <#Photograph> ;
