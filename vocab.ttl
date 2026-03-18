@@ -138,7 +138,8 @@ rdfs:label "picture location"@en ;
 rdfs:comment "Specifies the location where the photograph was taken, which may be a literal string or a link to a geographic entity" ;
 rdfs:domain <#Photograph> ;
 rdfs:range <#Person> ;
-rdfs:range <#Thing> .
+rdfs:range <#Thing> ;
+rdfs:range <#Country> .
 
 <#describes> a rdf:Property ;
 rdfs:label "description"@en ;
