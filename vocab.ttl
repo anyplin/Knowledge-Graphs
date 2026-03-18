@@ -156,6 +156,6 @@ rdfs:range xsd:string .
 
 <#sourceUrl> a rdf:Property ;
 rdfs:label "source URL"@en ;
-rdfs:comment "A source URL where the photograph can be accessed."
+rdfs:comment "A source URL where the photograph can be accessed." ;
 rdfs:domain <#Photograph> ;
 rdfs:range xsd:anyURI .
