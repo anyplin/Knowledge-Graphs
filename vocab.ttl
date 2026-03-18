@@ -7,6 +7,7 @@
 
 # Classes
 <#Person> a rdfs:Class ;
+rdfs:subClassOf foaf:Person ;
 rdfs:label "person"@en ;
 rdfs:comment "A person is a human being who is regarded as an individual."@en .
 
@@ -45,15 +46,18 @@ rdfs:label "city"@en ;
 rdfs:comment "An urban settlement that serves as a primary geographic container for buildings, organizations, and residents."@en .
 
 <#Photograph> a rdfs:Class ;
+rdfs:subClassOf foaf:Image ;
 rdfs:label "photograph"@en ;
 rdfs:comment "An image of a person, object, or view that is produced by using a camera and film."@en .
 
 <#Thing> a rdfs:Class ;
+rdfs:subClassOf owl:Thing ;
 rdfs:label "thing"@en ;
 rdfs:comment "Used to refer in an approximate way to an object or to avoid naming it"@en .
 
 # Properties
 <#name> a rdf:Property ;
+rdfs:subPropertyOf foaf:name ;
 rdfs:label "name"@en ;
 rdfs:comment "Name associated to a person"@en ;
 rdfs:domain <#Person> ;
@@ -115,18 +119,21 @@ rdfs:domain <#Person> ;
 rdfs:range <#Course> .
 
 <#titled> a rdf:Property ;
+rdfs:subPropertyOf foaf:name ;
 rdfs:label "titled"@en ;
 rdfs:comment "With the title of" ;
 rdfs:domain <#Photograph> ;
 rdfs:range xsd:string .
 
 <#createdBy> a rdf:Property ;
+rdfs:subPropertyOf foaf:made ;
 rdfs:label "created by"@en ;
 rdfs:comment "To make something new, or invent something by someone" ;
 rdfs:domain <#Photograph> ;
 rdfs:range <#Person> .
 
 <#depicts> a rdf:Property ;
+owl:equivalentProperty foaf:depicts ;
 rdfs:label "depicts"@en ;
 rdfs:comment "To represent or show something in a picture or story" ;
 rdfs:domain <#Photograph> ;
@@ -146,3 +153,9 @@ rdfs:label "description"@en ;
 rdfs:comment "A statement or a piece of writing that tells what something or someone is like" ;
 rdfs:domain <#Photograph> ;
 rdfs:range xsd:string .
+
+<#sourceUrl> a rdf:Property ;
+rdfs:label "source URL"@en ;
+rdfs:comment "A source URL where the photograph can be accessed."
+rdfs:domain <#Photograph> ;
+rdfs:range xsd:anyURI .
