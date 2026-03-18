@@ -44,6 +44,14 @@ rdfs:comment "Special type of work place where start-up companies are gathered."
 rdfs:label "city"@en ;
 rdfs:comment "An urban settlement that serves as a primary geographic container for buildings, organizations, and residents."@en .
 
+<#Photograph> a rdfs:Class ;
+rdfs:label "photograph"@en ;
+rdfs:comment "An image of a person, object, or view that is produced by using a camera and film."@en .
+
+<#Thing> a rdfs:Class ;
+rdfs:label "thing"@en ;
+rdfs:comment "Used to refer in an approximate way to an object or to avoid naming it"@en .
+
 # Properties
 <#name> a rdf:Property ;
 rdfs:label "name"@en ;
@@ -105,3 +113,35 @@ rdfs:label "course participant"@en ;
 rdfs:comment "The fact that a person is participating in a certain course" ;
 rdfs:domain <#Person> ;
 rdfs:range <#Course> .
+
+<#titled> a rdf:Property ;
+rdfs:label "titled"@en ;
+rdfs:comment "With the title of" ;
+rdfs:domain <#Photograph> ;
+rdfs:range xsd:string .
+
+<#createdBy> a rdf:Property ;
+rdfs:label "created by"@en ;
+rdfs:comment "To make something new, or invent something by someone" ;
+rdfs:domain <#Photograph> ;
+rdfs:range <#Person> .
+
+<#depicts> a rdf:Property ;
+rdfs:label "depicts"@en ;
+rdfs:comment "To represent or show something in a picture or story" ;
+rdfs:domain <#Photograph> ;
+rdfs:range <#Person> ;
+rdfs:range <#Thing> .
+
+<#pictureLocation> a rdf:Property ;
+rdfs:label "picture location"@en ;
+rdfs:comment "Specifies the location where the photograph was taken, which may be a literal string or a link to a geographic entity" ;
+rdfs:domain <#Photograph> ;
+rdfs:range <#Person> ;
+rdfs:range <#Thing> .
+
+<#describes> a rdf:Property ;
+rdfs:label "description"@en ;
+rdfs:comment "A statement or a piece of writing that tells what something or someone is like" ;
+rdfs:domain <#Photograph> ;
+rdfs:range xsd:string .
