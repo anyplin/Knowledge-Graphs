@@ -137,16 +137,13 @@ rdfs:subPropertyOf foaf:depicts ;
 rdfs:label "depicts"@en ;
 rdfs:comment "To represent or show something in a picture or story" ;
 rdfs:domain <#Photograph> ;
-rdfs:range <#Person> ;
-rdfs:range <#Thing> .
+rdfs:range rdfs:Resource .
 
 <#pictureLocation> a rdf:Property ;
 rdfs:label "picture location"@en ;
 rdfs:comment "Specifies the location where the photograph was taken, which may be a literal string or a link to a geographic entity" ;
 rdfs:domain <#Photograph> ;
-rdfs:range <#Person> ;
-rdfs:range <#Thing> ;
-rdfs:range <#Country> .
+rdfs:range rdfs:Resource .
 
 <#describes> a rdf:Property ;
 rdfs:label "description"@en ;
