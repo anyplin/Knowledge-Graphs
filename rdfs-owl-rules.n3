@@ -1,7 +1,15 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
-# Rule for equivalentProperty
+# Rule for owl equivalentClass
+{?A owl:equivalentClass ?B. ?X a ?A} => {?X a ?B}.
+{?A owl:equivalentClass ?B. ?X a ?B} => {?X a ?A}.
+{?A owl:equivalentClass ?B} => {?B owl:equivalentClass ?A}.
+{?A owl:equivalentClass ?B. ?B owl:equivalentClass ?C} => {?A owl:equivalentClass ?C}.
+{?A owl:equivalentClass ?B} => {?A rdfs:subClassOf ?B. ?B rdfs:subClassOf ?A}.
+{?A rdfs:subClassOf ?B. ?B rdfs:subClassOf ?A} => {?A owl:equivalentClass ?B}.
+
+# Rule for owl equivalentProperty
 {?P owl:equivalentProperty ?Q. ?S ?P ?O} => {?S ?Q ?O}.
 {?P owl:equivalentProperty ?Q. ?S ?Q ?O} => {?S ?P ?O}.
 {?P owl:equivalentProperty ?Q} => {?Q owl:equivalentProperty ?P}.
@@ -9,13 +17,18 @@
 {?P owl:equivalentProperty ?Q} => {?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?P}.
 {?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?P} => {?P owl:equivalentProperty ?Q}.
 
-# Rule for subClassOf
+# Rule for owl sameAs
+{?X owl:sameAs ?Y} => {?Y owl:sameAs ?X}.
+{?X owl:sameAs ?Y. ?Y owl:sameAs ?Z} => {?X owl:sameAs ?Z}.
+{?X owl:sameAs ?Y. ?X owl:differentFrom ?Y} => false.
+
+# Rule for rdfs subClassOf
 {?C rdfs:subClassOf ?D. ?X a ?C} => {?X a ?D}.
 {?C rdfs:subClassOf ?D. ?D rdfs:subClassOf ?E} => {?C rdfs:subClassOf ?E}.
 {?C rdfs:subClassOf ?D. ?P rdfs:domain ?C} => {?P rdfs:domain ?D}.
 {?C rdfs:subClassOf ?D. ?P rdfs:range ?C} => {?P rdfs:range ?D}.
 
-# Rule for subPropertyOf
+# Rule for rdfs subPropertyOf
 {?P rdfs:subPropertyOf ?Q. ?S ?P ?O} => {?S ?Q ?O}.
 {?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?R} => {?P rdfs:subPropertyOf ?R}.
 {?P rdfs:subPropertyOf ?Q. ?Q rdfs:domain ?C} => {?P rdfs:domain ?C}.
