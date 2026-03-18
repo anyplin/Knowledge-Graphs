@@ -63,34 +63,39 @@ vocab:knows jn:JelleNelis, km:MyName, seppe:me .
 
 km:MyName vocab:courseParticipant <#KnowledgeGraphs> .
 
-<https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/67302095_2599535640078899_6680573281034043392_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=dDRVWE-FxOsQ7kNvwHeBzby&_nc_oc=AdmepKJhwJsSvHpk8GJGSTDMK3c4AtqVavuBGWfbFf1LkXzJwwUODnE-J2rQzK-k-2cZbiGwWcPJwJ7ml2a1ftoY&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=cVwEuzx_3iEHstNbwJU0FQ&_nc_ss=8&oh=00_Afx9HHOOkO2NjFicHCBTMy0OP923o4jhfwP7qoN0G1YKFA&oe=69E1F02D> a vocab:Photograph ;
+<#PaintedAnimationLane> a vocab:Photograph ;
 vocab:titled "Painted Animation Lane"@en ;
 vocab:depicts <#Anna> ;
 vocab:pictureLocation <#Taiwan> ;
-vocab:describes "Anna, brother and friends posting as One Piece characters at the Painted Animation Lane in Taichung."@en .
+vocab:describes "Anna, brother and friends posting as One Piece characters at the Painted Animation Lane in Taichung."@en ;
+vocab:sourceUrl <https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/67302095_2599535640078899_6680573281034043392_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=dDRVWE-FxOsQ7kNvwHeBzby&_nc_oc=AdmepKJhwJsSvHpk8GJGSTDMK3c4AtqVavuBGWfbFf1LkXzJwwUODnE-J2rQzK-k-2cZbiGwWcPJwJ7ml2a1ftoY&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=cVwEuzx_3iEHstNbwJU0FQ&_nc_ss=8&oh=00_Afx9HHOOkO2NjFicHCBTMy0OP923o4jhfwP7qoN0G1YKFA&oe=69E1F02D> .
 
-<https://drive.google.com/file/d/1-T1g6v51tuf82a1icVhW7POodfJgUL3X/view?usp=drive_link> a vocab:Photograph ;
+<#ChiangKaiShekMemorialHall> a vocab:Photograph ;
 vocab:titled "Anna in Taipei at the Chiang Kai-shek Memorial Hall."@en ;
 vocab:depicts <#Anna> ;
 vocab:pictureLocation <#Taiwan> ;
-vocab:describes "Me visiting the Chiang Kai-shek Memorial Hall in Taiwan, Taipei."@en .
+vocab:describes "Me visiting the Chiang Kai-shek Memorial Hall in Taiwan, Taipei."@en ;
+vocab:sourceUrl <https://drive.google.com/file/d/1-T1g6v51tuf82a1icVhW7POodfJgUL3X/view?usp=drive_link> .
 
-<https://drive.google.com/file/d/1hFTMzAAz9G6Z92fbXuk0WulxBsXh896k/view?usp=sharing> a vocab:Photograph ;
+<#RiverTracingTrip> a vocab:Photograph ;
 vocab:titled "Anna during river tracing trip."@en ;
 vocab:depicts <#Anna> ;
 vocab:pictureLocation <#Taiwan> ;
-vocab:describes "Me partaking in a river tracing trip organized by Shawa Canyoning in Taiwan."@en .
+vocab:describes "Me partaking in a river tracing trip organized by Shawa Canyoning in Taiwan."@en ;
+vocab:sourceUrl <https://drive.google.com/file/d/1hFTMzAAz9G6Z92fbXuk0WulxBsXh896k/view?usp=sharing> .
 
-<https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/554105573_25027470896858720_6708298891908591102_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f798df&_nc_ohc=1J8yGzyreSMQ7kNvwFgWL8w&_nc_oc=Adks0aZHe4o4NRSHnY9mXJdfZZ0qnZirRLl7748I33Qx1yaUSAzE1T9iTm9_KTiPG8hrYmjuDSWIk1a8FJJYEx82&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=4EtA78HtacUVBVRVawQ-1A&_nc_ss=8&oh=00_Afz0liGa-8MkV26-F3RTROHjY1V2Veyw3wJ_51Lo-5GMhQ&oe=69C07024> a vocab:Photograph ;
+<#YehliuQueensHead> a vocab:Photograph ;
 vocab:titled "Queen's Head at Yehliu Geopark."@en ;
 vocab:createdBy <#Anna> ;
 vocab:depicts <#QueensHead> ;
 vocab:pictureLocation <#Taiwan> ;
-vocab:describes "Famous rock formation at Yehliu Geopark titled the Queen's Head."@en .
+vocab:describes "Famous rock formation at Yehliu Geopark titled the Queen's Head."@en ;
+vocab:sourceUrl <https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/554105573_25027470896858720_6708298891908591102_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f798df&_nc_ohc=1J8yGzyreSMQ7kNvwFgWL8w&_nc_oc=Adks0aZHe4o4NRSHnY9mXJdfZZ0qnZirRLl7748I33Qx1yaUSAzE1T9iTm9_KTiPG8hrYmjuDSWIk1a8FJJYEx82&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=4EtA78HtacUVBVRVawQ-1A&_nc_ss=8&oh=00_Afz0liGa-8MkV26-F3RTROHjY1V2Veyw3wJ_51Lo-5GMhQ&oe=69C07024> .
 
-<https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/648385737_26519067977698997_8721697171311630591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=b895b5&_nc_ohc=5_seF9pqb3MQ7kNvwEMqrNR&_nc_oc=AdnFtBZFZgJRJySK5VzWRTNA3DAnMP0aGxJ57lOEAqVIDFZ8-6m9aLlCE5_VjBACYtS10m_FF9tpGiVz2sX6JHm5&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=R63s1kd0IZU73tTkq1ZZLg&_nc_ss=8&oh=00_AfzxGx6VNldmWOLb6hq0ZC0uNBF56LR6iVgtVsRWkAIhPQ&oe=69C06B50> a vocab:Photograph ;
+<#StoneBeachSpain> a vocab:Photograph ;
 vocab:titled "Stone beach in Spain"@en ;
 vocab:createdBy <#Anna> ;
 vocab:depicts <#Beach> ;
 vocab:pictureLocation <#Spain> ;
-vocab:describes "A beautiful stone beach in Spain."@en .
+vocab:describes "A beautiful stone beach in Spain."@en ;
+vocab:sourceUrl <https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/648385737_26519067977698997_8721697171311630591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=b895b5&_nc_ohc=5_seF9pqb3MQ7kNvwEMqrNR&_nc_oc=AdnFtBZFZgJRJySK5VzWRTNA3DAnMP0aGxJ57lOEAqVIDFZ8-6m9aLlCE5_VjBACYtS10m_FF9tpGiVz2sX6JHm5&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=R63s1kd0IZU73tTkq1ZZLg&_nc_ss=8&oh=00_AfzxGx6VNldmWOLb6hq0ZC0uNBF56LR6iVgtVsRWkAIhPQ&oe=69C06B50> .
